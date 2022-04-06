@@ -30,9 +30,14 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
+:root {
+    font-family: "Roboto", Serif;
+}
+
 body {
     line-height: 1;
     display: grid;
+    grid-auto-columns: 1fr;
     grid-template-areas:
     'dashboard header header header header'
     'dashboard action action action action'
@@ -40,10 +45,6 @@ body {
     'dashboard projects projects projects announcements'
     'dashboard projects projects projects trending'
     'dashboard projects projects projects trending'
-}
-
-ol, ul {
-    list-style: none;
 }
 
 blockquote, q {
@@ -62,23 +63,56 @@ table {
 }
 
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-area: header;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: clamp(50px, 10vw, 150px);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
 }
 
 .dashboard {
     grid-area: dashboard;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #1992D4;
 }
 
 .action-panel {
     grid-area: action;
+    justify-content: start;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    z-index: 1;
+    box-shadow: 0 8px 10px -10px grey;
+}
+
+.your-projects, .announcements, .trending {
+    background: #E2E8F0;
+    padding-top: 2rem;
 }
 
 .your-projects {
     grid-area: projects;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.your-projects > p {
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+.your-projects-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 1rem;
 }
 
 .announcements {
@@ -96,6 +130,144 @@ header {
     align-items: center;
 }
 
-img {
+.search-bar {
+    justify-self: start;
+}
+
+.user-small {
+    justify-self: end;
+    padding-right: 1rem;
+}
+
+.round-image {
     border-radius: 50%;
+}
+
+
+.logo {
+    color: white;
+    display: flex;
+    height: 24px;
+    padding: 1rem 1rem 1rem 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+}
+
+.user-big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    justify-self: start;
+}
+
+.action-buttons {
+    display: flex;
+    gap: max(1vw, 10px);
+    justify-self: end;
+    padding-right: 1rem;
+}
+
+.action-buttons button {
+    background: #1992D4;
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    border-style: none;
+    color: white;
+}
+
+.action-buttons button:hover {
+    background: #1c9de5;
+}
+
+.greeting {
+    font-size: 10px;
+}
+
+.user-big-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#search {
+    border-style: none;
+    background: #E2E8F0;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: min(30vw, 500px)
+}
+
+#search:focus {
+    outline: none;
+}
+
+ul li {
+    padding: 5px 10px 5px 35px;
+    list-style: none;
+    margin: 0;
+    vertical-align: middle;
+}
+
+ul li.home {
+    background: url("assets/icons/icons8-home-24.png") no-repeat left center;
+}
+
+ul li.profile {
+    background: url("assets/icons/icons8-customer-24.png") no-repeat left center;
+}
+
+ul li.messages {
+    background: url("assets/icons/icons8-topic-24.png") no-repeat left center;
+}
+
+ul li.history {
+    background: url("assets/icons/icons8-history-24.png") no-repeat left center;
+}
+
+ul li.tasks {
+    background: url("assets/icons/icons8-tasks-30.png") no-repeat left center;
+}
+
+ul li.communities {
+    background: url("assets/icons/icons8-crowd-24.png") no-repeat left center;
+}
+
+ul li.settings {
+    background: url("assets/icons/icons8-settings.svg") no-repeat left center;
+}
+
+ul li.support {
+    background: url("assets/icons/icons8-service-24.png") no-repeat left center;
+}
+
+ul li.privacy {
+    background: url("assets/icons/icons8-secure-24.png") no-repeat left center;
+}
+
+
+ul {
+    display: grid;
+    grid-template-rows: repeat(6, 40px);
+    align-items: center;
+
+}
+
+ul#user-menu, ul#info-menu {
+    color: white;
+    justify-self: start;
+    padding-left: 1rem;
+}
+
+.card {
+    border-radius: 5px;
+    background: white;
+    border-left-style: solid;
+    border-width: 6px;
+    border-color: #EFB42B;
+    box-shadow: 2px 2px 10px -5px grey;
 }

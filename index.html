@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
     <script src="script.js" defer></script>
 </head>
 
@@ -14,22 +15,24 @@
 <header>
     <div class="search-bar">
         <img width="24" height="24" src="assets/icons/icons8-search.svg" alt="search icon">
-        <input id="search" type="text" placeholder="search">
+        <input id="search" type="text">
         <label for="search" style="display: none">Search</label>
     </div>
     <div class="user-small">
         <img width="24" height="24" src="assets/icons/icons8-alarm-24 (2).png" alt="alarm icon">
-        <img width="36" height="36" src="assets/avatars/avatar-svgrepo-com.svg" alt="user avatar">
+        <img width="36" height="36" src="assets/avatars/avatar-svgrepo-com.svg" alt="user avatar" class="round-image">
         <h3>Morgan Oakley</h3>
     </div>
 </header>
 <div class="action-panel">
     <div class="user-big">
-        <img width="48" height="48" src="assets/avatars/avatar-svgrepo-com.svg" alt="user avatar">
-        <div class="greeting">Hi there,</div>
-        <h2>Morgan Oakley (@morgan)</h2>
+        <img width="48" height="48" src="assets/avatars/avatar-svgrepo-com.svg" alt="user avatar" class="round-image">
+        <div class="user-big-text">
+            <div class="greeting">Hi there,</div>
+            <h2>Morgan Oakley (@morgan)</h2>
+        </div>
     </div>
-    <div class="actions">
+    <div class="action-buttons">
         <button type="button" class="action-button">New</button>
         <button type="button" class="action-button">Upload</button>
         <button type="button" class="action-button">Share</button>
@@ -37,10 +40,11 @@
 </div>
 <div class="dashboard">
     <div class="logo">
-        <img src="assets/icons/icons8-dashboard-layout-48.png" alt="dashboard icon">
+        <img width="36" height="36" src="assets/icons/icons8-dashboard-layout-48.png" alt="dashboard icon"
+             class="logo-img">
         <h1>Dashboard</h1>
     </div>
-    <ul class="user-menu">
+    <ul id="user-menu">
         <li class="home">Home</li>
         <li class="profile">Profile</li>
         <li class="messages">Messages</li>
@@ -48,84 +52,93 @@
         <li class="tasks">Tasks</li>
         <li class="communities">Communities</li>
     </ul>
-    <ul class="info-menu">
+    <ul id="info-menu">
         <li class="settings">Settings</li>
         <li class="support">Support</li>
         <li class="privacy">Privacy</li>
     </ul>
 </div>
 <main class="your-projects">
-    <h3>Your Projects</h3>
-    <div class="project1">
-        <h3>Super Cool Project</h3>
-        <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h4>
-        <div class="fav-observe-share">
-            <img width="24" height="24" src="assets/icons/icons8-add-to-favorites-24 (2).png"
-                 alt="add to favourites icon">
-            <img width="24" height="24" src="assets/icons/icons8-eye-checked-24.png" alt="follow icon">
-            <img width="24" height="24" src="assets/icons/icons8-share-24.png" alt="share icon">
+    <p>Your Projects</p>
+    <div class="your-projects-cards">
+        <div class="card project1">
+            <h3>Super Cool Project</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                massa.
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h4>
+            <div class="fav-observe-share">
+                <img width="24" height="24" src="assets/icons/icons8-add-to-favorites-24 (2).png"
+                     alt="add to favourites icon">
+                <img width="24" height="24" src="assets/icons/icons8-eye-checked-24.png" alt="follow icon">
+                <img width="24" height="24" src="assets/icons/icons8-share-24.png" alt="share icon">
+            </div>
         </div>
-    </div>
-    <div class="project2">
-        <h3>Super Cool Project</h3>
-        <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h4>
-        <div class="fav-observe-share">
-            <img width="24" height="24" src="assets/icons/icons8-add-to-favorites-24 (2).png"
-                 alt="add to favourites icon">
-            <img width="24" height="24" src="assets/icons/icons8-eye-checked-24.png" alt="follow icon">
-            <img width="24" height="24" src="assets/icons/icons8-share-24.png" alt="share icon">
+        <div class="card project2">
+            <h3>Super Cool Project</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                massa.
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h4>
+            <div class="fav-observe-share">
+                <img width="24" height="24" src="assets/icons/icons8-add-to-favorites-24 (2).png"
+                     alt="add to favourites icon">
+                <img width="24" height="24" src="assets/icons/icons8-eye-checked-24.png" alt="follow icon">
+                <img width="24" height="24" src="assets/icons/icons8-share-24.png" alt="share icon">
+            </div>
         </div>
-    </div>
-    <div class="project3">
-        <h3>Super Cool Project</h3>
-        <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h4>
-        <div class="fav-observe-share">
-            <img width="24" height="24" src="assets/icons/icons8-add-to-favorites-24 (2).png"
-                 alt="add to favourites icon">
-            <img width="24" height="24" src="assets/icons/icons8-eye-checked-24.png" alt="follow icon">
-            <img width="24" height="24" src="assets/icons/icons8-share-24.png" alt="share icon">
+        <div class="card project3">
+            <h3>Super Cool Project</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                massa.
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h4>
+            <div class="fav-observe-share">
+                <img width="24" height="24" src="assets/icons/icons8-add-to-favorites-24 (2).png"
+                     alt="add to favourites icon">
+                <img width="24" height="24" src="assets/icons/icons8-eye-checked-24.png" alt="follow icon">
+                <img width="24" height="24" src="assets/icons/icons8-share-24.png" alt="share icon">
+            </div>
         </div>
-    </div>
-    <div class="project4">
-        <h3>Super Cool Project</h3>
-        <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h4>
-        <div class="fav-observe-share">
-            <img width="24" height="24" src="assets/icons/icons8-add-to-favorites-24 (2).png"
-                 alt="add to favourites icon">
-            <img width="24" height="24" src="assets/icons/icons8-eye-checked-24.png" alt="follow icon">
-            <img width="24" height="24" src="assets/icons/icons8-share-24.png" alt="share icon">
+        <div class="card project4">
+            <h3>Super Cool Project</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                massa.
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                massa.
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h4>
+            <div class="fav-observe-share">
+                <img width="24" height="24" src="assets/icons/icons8-add-to-favorites-24 (2).png"
+                     alt="add to favourites icon">
+                <img width="24" height="24" src="assets/icons/icons8-eye-checked-24.png" alt="follow icon">
+                <img width="24" height="24" src="assets/icons/icons8-share-24.png" alt="share icon">
+            </div>
         </div>
-    </div>
-    <div class="project5">
-        <h3>Super Cool Project</h3>
-        <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h4>
-        <div class="fav-observe-share">
-            <img width="24" height="24" src="assets/icons/icons8-add-to-favorites-24 (2).png"
-                 alt="add to favourites icon">
-            <img width="24" height="24" src="assets/icons/icons8-eye-checked-24.png" alt="follow icon">
-            <img width="24" height="24" src="assets/icons/icons8-share-24.png" alt="share icon">
+        <div class="card project5">
+            <h3>Super Cool Project</h3>
+            <h4>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h4>
+            <div class="fav-observe-share">
+                <img width="24" height="24" src="assets/icons/icons8-add-to-favorites-24 (2).png"
+                     alt="add to favourites icon">
+                <img width="24" height="24" src="assets/icons/icons8-eye-checked-24.png" alt="follow icon">
+                <img width="24" height="24" src="assets/icons/icons8-share-24.png" alt="share icon">
+            </div>
         </div>
-    </div>
-    <div class="project6">
-        <h3>Super Cool Project</h3>
-        <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h4>
-        <div class="fav-observe-share">
-            <img width="24" height="24" src="assets/icons/icons8-add-to-favorites-24 (2).png"
-                 alt="add to favourites icon">
-            <img width="24" height="24" src="assets/icons/icons8-eye-checked-24.png" alt="follow icon">
-            <img width="24" height="24" src="assets/icons/icons8-share-24.png" alt="share icon">
+        <div class="card project6">
+            <h3>Super Cool Project</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                massa.
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</h4>
+            <div class="fav-observe-share">
+                <img width="24" height="24" src="assets/icons/icons8-add-to-favorites-24 (2).png"
+                     alt="add to favourites icon">
+                <img width="24" height="24" src="assets/icons/icons8-eye-checked-24.png" alt="follow icon">
+                <img width="24" height="24" src="assets/icons/icons8-share-24.png" alt="share icon">
+            </div>
         </div>
     </div>
 </main>
@@ -153,22 +166,25 @@
 <div class="trending">
     <h3>Trending</h3>
     <div class="trending-users trending-user1">
-        <img width="36" height="36" src="assets/avatars/avatar-svgrepo-com (1).svg" alt="user avatar">
+        <img width="36" height="36" src="assets/avatars/avatar-svgrepo-com (1).svg" alt="user avatar"
+             class="round-image">
         <h4>@tegan</h4>
         <h4>World Peace Builder</h4>
     </div>
     <div class="trending-users trending-user2">
-        <img width="36" height="36" src="assets/avatars/avatar-svgrepo-com.svg" alt="user avatar">
+        <img width="36" height="36" src="assets/avatars/avatar-svgrepo-com.svg" alt="user avatar" class="round-image">
         <h4>@morgan</h4>
         <h4>Super Cool Project</h4>
     </div>
     <div class="trending-users trending-user3">
-        <img width="36" height="36" src="assets/avatars/avatar-svgrepo-com (2).svg" alt="user avatar">
+        <img width="36" height="36" src="assets/avatars/avatar-svgrepo-com (2).svg" alt="user avatar"
+             class="round-image">
         <h4>@kendall</h4>
         <h4>Life Changing App</h4>
     </div>
     <div class="trending-users trending-user4">
-        <img width="36" height="36" src="assets/avatars/avatar-svgrepo-com (3).svg" alt="user avatar">
+        <img width="36" height="36" src="assets/avatars/avatar-svgrepo-com (3).svg" alt="user avatar"
+             class="round-image">
         <h4>@alex</h4>
         <h4>No Traffic Maker</h4>
     </div>

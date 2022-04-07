@@ -82,14 +82,6 @@ header {
     '. . . trending';
 }
 
-@media only screen and (max-width: 1137px) {
-    .your-projects-cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 1rem;
-        justify-content: center;
-    }
-}
 
 @media only screen and (max-width: 750px) {
     .content {
@@ -118,9 +110,7 @@ header {
     .search-bar {
         padding-right: 1rem !important;
     }
-    .your-projects-cards {
-        grid-template-columns: 1fr !important;
-    }
+
 }
 
 @media only screen and (max-width: 550px) {
@@ -179,7 +169,7 @@ header {
 
 .your-projects-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 350px);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1rem;
     justify-content: center;
 }

@@ -37,16 +37,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
-    display: grid;
-    grid-template-columns: 0.6fr 1fr 1fr 1fr 0.6fr;
-    grid-template-rows: 4rem 4.2rem 1rem auto auto auto;
-    grid-template-areas:
-    'dashboard header header header header'
-    'dashboard action action action action'
-    'dashboard projects projects projects announcements'
-    'dashboard . . . announcements'
-    'dashboard . . . trending'
-    'dashboard . . . trending'
+    display: flex;
 }
 
 blockquote, q {
@@ -77,9 +68,75 @@ header {
     background: white;
 }
 
+.content {
+    display: grid;
+    margin-left: max(15vw, 200px);
+    grid-template-columns: 1fr 1fr 1fr 0.6fr;
+    grid-template-rows: 4rem 4.2rem 1rem auto auto auto;
+    grid-template-areas:
+    'header header header header'
+    'action action action action'
+    'projects projects projects announcements'
+    '. . . announcements'
+    '. . . trending'
+    '. . . trending';
+}
+
+@media only screen and (max-width: 750px) {
+    .content {
+        grid-template-areas:
+        'header header header header'
+        'action action action action'
+        'projects projects projects projects'
+        'announcements announcements announcements announcements'
+        'trending trending trending trending'
+        '. . . .';
+        grid-template-rows: repeat(6, auto);
+    }
+
+    .announcements, .trending {
+        padding-left: 1rem;
+    }
+
+    .user-big {
+        display: none !important;
+    }
+
+    .action-buttons {
+        padding-bottom: 1rem;
+    }
+
+    .search-bar {
+        padding-right: 1rem !important;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .dashboard {
+        display: none !important;
+    }
+    .content {
+        margin: 0;
+    }
+
+    .action-panel {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .action-buttons button {
+        width: 10ch !important;
+    }
+
+}
+
 .dashboard {
     grid-area: dashboard;
     background: #1992D4;
+    height: 100vh;
+    position: fixed;
+    width: max(15vw, 200px);
 }
 
 .action-panel {
@@ -310,7 +367,7 @@ ul#user-menu, ul#info-menu {
 
 }
 
-.announcement-cards{
+.announcement-cards {
     display: grid;
     background: white;
     padding: 2rem;
@@ -339,6 +396,7 @@ ul#user-menu, ul#info-menu {
     font-size: 0.7rem;
     color: #838383;
 }
+
 .trending-cards {
     display: grid;
     background: white;
